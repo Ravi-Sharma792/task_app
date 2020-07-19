@@ -73,11 +73,13 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 10,
+                  width: 7,
                 ),
                 FlatButton(
-                  color: Theme.of(context).primaryColor,
+                  //color: Theme.of(context).primaryColor,
                   shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                        color: Theme.of(context).primaryColor, width: 3.0),
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   onPressed: () => Navigator.of(context).pushNamed('/login'),
