@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 RaisedButton(
                   color: Theme.of(context).primaryColor,
-                  onPressed: () {},
+                  onPressed: () => Navigator.of(context).pushNamed('/signup'),
                   child: Text('SignUp',
                       style: TextStyle(
                         color: Colors.white,
@@ -76,12 +76,15 @@ class WelcomeScreen extends StatelessWidget {
                   width: 10,
                 ),
                 FlatButton(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).primaryColor,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0),
+                    borderRadius: BorderRadius.circular(20.0),
                   ),
-                  onPressed: () {},
-                  child: Text('Login'),
+                  onPressed: () => Navigator.of(context).pushNamed('/login'),
+                  child: Text(
+                    'Login',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
             ),

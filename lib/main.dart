@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/Widgets/welcome_screen.dart';
+import 'package:task_app/Screens/login_screen.dart';
+import 'package:task_app/Screens/welcome_screen.dart';
+import 'Screens/signup_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +19,10 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.purple[200],
       ),
       home: WelcomeScreen(),
+      routes: {
+        '/signup': (ctx) => SignUpScreen(),
+        '/login': (ctx) => LoginScreen()
+      },
     );
   }
 }
