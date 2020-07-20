@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         accentColor: Colors.purple[200],
       ),
-      home: WelcomeScreen(),
+      home: SafeArea(child: WelcomeScreen()),
       routes: {
         '/signup': (ctx) => SignUpScreen(),
         '/login': (ctx) => LoginScreen()
