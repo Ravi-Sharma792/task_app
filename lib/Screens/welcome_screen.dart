@@ -24,9 +24,11 @@ class WelcomeScreen extends StatelessWidget {
                   Text(
                     'Welcome',
                     style: TextStyle(
+                      fontFamily: 'Raleway',
+                      //fontStyle: FontStyle.normal,
                       fontSize: 70,
                       color: Colors.white,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   const SizedBox(
@@ -36,9 +38,10 @@ class WelcomeScreen extends StatelessWidget {
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium turpis vitae nibh lobortis feugiat.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                      fontFamily: 'Raleway',
                       fontSize: 23,
                       color: Colors.white,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   const SizedBox(
@@ -49,11 +52,7 @@ class WelcomeScreen extends StatelessWidget {
                     onPressed: () => Navigator.of(context).pushNamed('/signup'),
                     child: Text(
                       'SignUp',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                      ),
+                      style: Theme.of(context).textTheme.button,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
@@ -88,11 +87,7 @@ class WelcomeScreen extends StatelessWidget {
                     onPressed: () => Navigator.of(context).pushNamed('/login'),
                     child: Text(
                       'Login',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                      ),
+                      style: Theme.of(context).textTheme.button,
                     ),
                   ),
                 ],

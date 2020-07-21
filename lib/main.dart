@@ -17,6 +17,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
         accentColor: Colors.purple[200],
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              button: TextStyle(
+                fontFamily: 'NewHelvetica',
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
       ),
       home: SafeArea(child: WelcomeScreen()),
       routes: {
