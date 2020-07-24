@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.purple,
-        accentColor: Colors.purple[200],
+        accentColor: Colors.purple[100],
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               button: TextStyle(
