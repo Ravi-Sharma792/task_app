@@ -24,28 +24,106 @@ class SignUpScreen extends StatelessWidget {
                 color: Theme.of(context).accentColor,
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Theme.of(context).primaryColor,
-                    width: 2,
-                  ),
-                  borderRadius: BorderRadius.circular(50)),
-              child: Row(
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 230, 20, 0),
+              child: Column(
                 children: <Widget>[
                   Container(
-                    width: 60,
-                    child: Icon(
-                      Icons.email,
-                      color: Theme.of(context).primaryColor,
-                      size: 20,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          width: 60,
+                          child: Icon(
+                            Icons.account_circle,
+                            color: Theme.of(context).primaryColor,
+                            size: 23,
+                          ),
+                        ),
+                        Expanded(
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Username...',
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  Expanded(
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        hintText: 'Username',
-                      ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          width: 60,
+                          child: Icon(
+                            Icons.email,
+                            color: Theme.of(context).primaryColor,
+                            size: 23,
+                          ),
+                        ),
+                        Expanded(
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Email...',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          width: 60,
+                          child: Icon(
+                            Icons.lock,
+                            color: Theme.of(context).primaryColor,
+                            size: 23,
+                          ),
+                        ),
+                        Expanded(
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Password...',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  RaisedButton(
+                    color: Theme.of(context).primaryColor,
+                    onPressed: () => Navigator.of(context).pushNamed('/signup'),
+                    child: Text(
+                      'SignUp',
+                      style: Theme.of(context).textTheme.button,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0),
                     ),
                   ),
                 ],
