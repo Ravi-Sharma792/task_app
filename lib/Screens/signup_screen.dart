@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:task_app/social_media_icons_icons.dart';
 // import 'package:flare_flutter/flare_actor.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -28,7 +30,7 @@ class SignUpScreen extends StatelessWidget {
               //   ),
               // ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 230, 20, 0),
+                padding: EdgeInsets.fromLTRB(20, 230, 20, deviceHeight),
                 child: Column(
                   children: <Widget>[
                     Container(
@@ -120,8 +122,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     RaisedButton(
                       color: Theme.of(context).primaryColor,
-                      onPressed: () =>
-                          Navigator.of(context).pushNamed('/signup'),
+                      onPressed: () {},
                       child: Text(
                         'SignUp',
                         style: Theme.of(context).textTheme.button,
@@ -136,11 +137,83 @@ class SignUpScreen extends StatelessWidget {
                     Container(
                       height: 1,
                       width: deviceWidth,
-                      color: Colors.white,
-                    )
+                      color: Colors.grey[200],
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    RaisedButton(
+                      color: Theme.of(context).primaryColor,
+                      onPressed: () {},
+                      child: Text(
+                        'Login',
+                        style: Theme.of(context).textTheme.button,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Container(
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            width: 60,
+                            child: Icon(
+                              MdiIcons.facebook,
+                              color: Color(0xff3b5998),
+                              size: 30,
+                            ),
+                          ),
+                          Expanded(
+                            child: Text(
+                              'Sign in with facebook',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'Raleway',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
+
+              // Padding(
+              //   padding: EdgeInsets.fromLTRB(40, 510, 20, 20),
+              //   child: Row(
+              //     children: <Widget>[
+              //       IconButton(
+              //         icon: Icon(
+              //           MdiIcons.facebook,
+              //           size: 100,
+              //           color: Color(0xff3b5998),
+              //         ),
+              //         onPressed: () {},
+              //       ),
+              //       SizedBox(
+              //         width: 100,
+              //       ),
+              //       IconButton(
+              //         icon: Icon(
+              //           MdiIcons.googlePlus,
+              //           size: 100,
+              //           color: Color(0xffdb4a39),
+              //         ),
+              //         onPressed: () {},
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),
