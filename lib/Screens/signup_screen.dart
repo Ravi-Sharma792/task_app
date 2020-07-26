@@ -15,19 +15,6 @@ class SignUpScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Stack(
             children: <Widget>[
-              // Container(
-              //   padding: EdgeInsets.all(100.0),
-              //   margin: EdgeInsets.only(bottom: 30.0),
-              //   height: deviceHeight,
-              //   width: deviceWidth,
-              //   decoration: BoxDecoration(
-              //     borderRadius: BorderRadius.only(
-              //       bottomLeft: Radius.elliptical(700.0, 300.0),
-              //       bottomRight: Radius.elliptical(700.0, 300.0),
-              //     ),
-              //     color: Theme.of(context).accentColor,
-              //   ),
-              // ),
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 230, 20, deviceHeight),
                 child: Column(
