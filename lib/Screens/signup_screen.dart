@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:task_app/social_media_icons_icons.dart';
 // import 'package:flare_flutter/flare_actor.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -169,12 +168,43 @@ class SignUpScreen extends StatelessWidget {
                             child: Icon(
                               MdiIcons.facebook,
                               color: Color(0xff3b5998),
-                              size: 30,
+                              size: 35,
                             ),
                           ),
                           Expanded(
                             child: Text(
-                              'Sign in with facebook',
+                              'Sign in with Facebook',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'Raleway',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            width: 60,
+                            child: Icon(
+                              MdiIcons.googlePlus,
+                              color: Color(0xffdb4a39),
+                              size: 35,
+                            ),
+                          ),
+                          Expanded(
+                            child: Text(
+                              'Sign in with Google',
                               style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: 'Raleway',
@@ -187,33 +217,6 @@ class SignUpScreen extends StatelessWidget {
                   ],
                 ),
               ),
-
-              // Padding(
-              //   padding: EdgeInsets.fromLTRB(40, 510, 20, 20),
-              //   child: Row(
-              //     children: <Widget>[
-              //       IconButton(
-              //         icon: Icon(
-              //           MdiIcons.facebook,
-              //           size: 100,
-              //           color: Color(0xff3b5998),
-              //         ),
-              //         onPressed: () {},
-              //       ),
-              //       SizedBox(
-              //         width: 100,
-              //       ),
-              //       IconButton(
-              //         icon: Icon(
-              //           MdiIcons.googlePlus,
-              //           size: 100,
-              //           color: Color(0xffdb4a39),
-              //         ),
-              //         onPressed: () {},
-              //       ),
-              //     ],
-              //   ),
-              // ),
             ],
           ),
         ),
