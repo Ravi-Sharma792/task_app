@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:task_app/Widgets/login_bars.dart';
+import 'package:task_app/Widgets/social_media_bar.dart';
 // import 'package:flare_flutter/flare_actor.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -19,114 +21,15 @@ class SignUpScreen extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(20, 230, 20, deviceHeight),
                 child: Column(
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            width: 60,
-                            child: Icon(
-                              Icons.account_circle,
-                              color: Theme.of(context).primaryColor,
-                              size: 23,
-                            ),
-                          ),
-                          Expanded(
-                            child: TextFormField(
-                              style: TextStyle(
-                                fontFamily: 'Raleway',
-                                color: Colors.black,
-                              ),
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: 'Username',
-                                hintStyle: TextStyle(
-                                  fontFamily: 'Raleway',
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    LoginBars(Icons.account_circle, 'Username'),
                     SizedBox(
                       height: 10.0,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            width: 60,
-                            child: Icon(
-                              Icons.email,
-                              color: Theme.of(context).primaryColor,
-                              size: 23,
-                            ),
-                          ),
-                          Expanded(
-                            child: TextFormField(
-                              style: TextStyle(
-                                fontFamily: 'Raleway',
-                                color: Colors.black,
-                              ),
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: 'E-mail',
-                                hintStyle: TextStyle(
-                                  fontFamily: 'Raleway',
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    LoginBars(Icons.email, 'E-mail'),
                     SizedBox(
                       height: 10.0,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            width: 60,
-                            child: Icon(
-                              Icons.lock,
-                              color: Theme.of(context).primaryColor,
-                              size: 23,
-                            ),
-                          ),
-                          Expanded(
-                            child: TextFormField(
-                              style: TextStyle(
-                                fontFamily: 'Raleway',
-                                color: Colors.black,
-                              ),
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: 'Password',
-                                hintStyle: TextStyle(
-                                  fontFamily: 'Raleway',
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    LoginBars(Icons.lock, 'Password'),
                     SizedBox(
                       height: 10.0,
                     ),
@@ -167,59 +70,18 @@ class SignUpScreen extends StatelessWidget {
                     SizedBox(
                       height: 10.0,
                     ),
-                    Container(
-                      height: 45,
-                      color: Color(0xff3b5998),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            width: 60,
-                            child: Icon(
-                              MdiIcons.facebook,
-                              color: Colors.white,
-                              size: 35,
-                            ),
-                          ),
-                          Expanded(
-                            child: Text(
-                              'Sign in with Facebook',
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontFamily: 'Raleway',
-                                  color: Colors.white),
-                            ),
-                          ),
-                        ],
-                      ),
+                    SocialMediaBar(
+                      Color(0xff3b5998),
+                      MdiIcons.facebook,
+                      'Sign in with Facebook',
                     ),
                     SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      height: 45,
-                      color: Color(0xffdb4a39),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            width: 60,
-                            child: Icon(
-                              MdiIcons.googlePlus,
-                              color: Colors.white,
-                              size: 35,
-                            ),
-                          ),
-                          Expanded(
-                            child: Text(
-                              'Sign in with Google',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: 'Raleway',
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                    SocialMediaBar(
+                      Color(0xffdb4a39),
+                      MdiIcons.googlePlus,
+                      'Sign in with Google',
                     ),
                   ],
                 ),
