@@ -36,9 +36,17 @@ class SignUpScreen extends StatelessWidget {
                           ),
                           Expanded(
                             child: TextFormField(
+                              style: TextStyle(
+                                fontFamily: 'Raleway',
+                                color: Colors.black,
+                              ),
                               decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'Username...',
+                                hintText: 'Username',
+                                hintStyle: TextStyle(
+                                  fontFamily: 'Raleway',
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ),
@@ -65,9 +73,17 @@ class SignUpScreen extends StatelessWidget {
                           ),
                           Expanded(
                             child: TextFormField(
+                              style: TextStyle(
+                                fontFamily: 'Raleway',
+                                color: Colors.black,
+                              ),
                               decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'Email...',
+                                hintText: 'E-mail',
+                                hintStyle: TextStyle(
+                                  fontFamily: 'Raleway',
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ),
@@ -94,9 +110,17 @@ class SignUpScreen extends StatelessWidget {
                           ),
                           Expanded(
                             child: TextFormField(
+                              style: TextStyle(
+                                fontFamily: 'Raleway',
+                                color: Colors.black,
+                              ),
                               decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'Password...',
+                                hintText: 'Password',
+                                hintStyle: TextStyle(
+                                  fontFamily: 'Raleway',
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ),
@@ -130,7 +154,8 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     RaisedButton(
                       color: Theme.of(context).primaryColor,
-                      onPressed: () {},
+                      onPressed: () =>
+                          Navigator.of(context).pushNamed('/login'),
                       child: Text(
                         'Login',
                         style: Theme.of(context).textTheme.button,
@@ -143,18 +168,15 @@ class SignUpScreen extends StatelessWidget {
                       height: 10.0,
                     ),
                     Container(
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(50),
-                      ),
+                      height: 45,
+                      color: Color(0xff3b5998),
                       child: Row(
                         children: <Widget>[
                           Container(
                             width: 60,
                             child: Icon(
                               MdiIcons.facebook,
-                              color: Color(0xff3b5998),
+                              color: Colors.white,
                               size: 35,
                             ),
                           ),
@@ -162,9 +184,9 @@ class SignUpScreen extends StatelessWidget {
                             child: Text(
                               'Sign in with Facebook',
                               style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: 'Raleway',
-                              ),
+                                  fontSize: 20,
+                                  fontFamily: 'Raleway',
+                                  color: Colors.white),
                             ),
                           ),
                         ],
@@ -174,18 +196,15 @@ class SignUpScreen extends StatelessWidget {
                       height: 10,
                     ),
                     Container(
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(50),
-                      ),
+                      height: 45,
+                      color: Color(0xffdb4a39),
                       child: Row(
                         children: <Widget>[
                           Container(
                             width: 60,
                             child: Icon(
                               MdiIcons.googlePlus,
-                              color: Color(0xffdb4a39),
+                              color: Colors.white,
                               size: 35,
                             ),
                           ),
@@ -195,6 +214,7 @@ class SignUpScreen extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: 'Raleway',
+                                color: Colors.white,
                               ),
                             ),
                           ),
