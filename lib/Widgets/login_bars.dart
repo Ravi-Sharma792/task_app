@@ -11,35 +11,28 @@ class LoginBars extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(50),
+        borderRadius: BorderRadius.circular(45),
       ),
-      child: Row(
-        children: <Widget>[
-          Container(
-            width: 60,
-            child: Icon(
+      child: Expanded(
+        child: TextField(
+          style: TextStyle(
+            fontFamily: 'Raleway',
+            color: Colors.black,
+          ),
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            labelText: title,
+            labelStyle: TextStyle(
+              fontFamily: 'Raleway',
+              color: Colors.black,
+            ),
+            prefixIcon: Icon(
               icon,
               color: Theme.of(context).primaryColor,
               size: 23,
             ),
           ),
-          Expanded(
-            child: TextFormField(
-              style: TextStyle(
-                fontFamily: 'Raleway',
-                color: Colors.black,
-              ),
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: title,
-                hintStyle: TextStyle(
-                  fontFamily: 'Raleway',
-                  color: Colors.black,
-                ),
-              ),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

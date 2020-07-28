@@ -7,7 +7,7 @@ import 'package:task_app/Widgets/social_media_bar.dart';
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
+    // double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
@@ -18,7 +18,7 @@ class SignUpScreen extends StatelessWidget {
           child: Stack(
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 230, 20, deviceHeight),
+                padding: EdgeInsets.fromLTRB(20, 190, 20, 20),
                 child: Column(
                   children: <Widget>[
                     LoginBars(Icons.account_circle, 'Username'),

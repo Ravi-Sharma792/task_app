@@ -10,27 +10,34 @@ class SocialMediaBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double deviceWidth = MediaQuery.of(context).size.width;
     return Container(
-      height: 45,
-      color: bgcolor,
-      child: Row(
-        children: <Widget>[
-          Container(
-            width: 60,
-            child: Icon(
-              icon,
-              color: Colors.white,
-              size: 35,
+      width: deviceWidth,
+      height: 50,
+      decoration: BoxDecoration(
+        color: bgcolor,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Expanded(
+        child: Row(
+          children: <Widget>[
+            Container(
+              width: 60,
+              child: Icon(
+                icon,
+                color: Colors.white,
+                size: 35,
+              ),
             ),
-          ),
-          Expanded(
-            child: Text(
-              title,
-              style: TextStyle(
-                  fontSize: 20, fontFamily: 'Raleway', color: Colors.white),
+            Expanded(
+              child: Text(
+                title,
+                style: TextStyle(
+                    fontSize: 20, fontFamily: 'Raleway', color: Colors.white),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
