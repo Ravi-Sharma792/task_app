@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-// import 'package:flare_flutter/flare_actor.dart';
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:task_app/Widgets/login_bars.dart';
 import 'package:task_app/Widgets/social_media_bar.dart';
 
@@ -18,9 +18,24 @@ class LoginScreen extends StatelessWidget {
           child: Stack(
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 249, 20, 20),
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
                 child: Column(
                   children: <Widget>[
+                    Container(
+                      height: 230,
+                      width: 230,
+                      child: CircleAvatar(
+                        child: ClipOval(
+                          child: FlareActor(
+                            'assets/flare/teddy_test.flr',
+                            alignment: Alignment.center,
+                            fit: BoxFit.contain,
+                            animation: 'idle',
+                          ),
+                        ),
+                        backgroundColor: Colors.white,
+                      ),
+                    ),
                     SizedBox(
                       height: 10.0,
                     ),

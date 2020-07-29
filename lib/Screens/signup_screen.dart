@@ -21,6 +21,12 @@ class SignUpScreen extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(20, 190, 20, 20),
                 child: Column(
                   children: <Widget>[
+                    // FlareActor(
+                    //   'assets/flare/teddy_test.flr',
+                    //   alignment: Alignment.center,
+                    //   fit: BoxFit.contain,
+                    //   animation: 'idle',
+                    // ),
                     LoginBars(Icons.account_circle, 'Username'),
                     SizedBox(
                       height: 10.0,
