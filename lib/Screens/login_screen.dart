@@ -50,9 +50,9 @@ class LoginScreen extends StatelessWidget {
                     RaisedButton(
                       color: Theme.of(context).primaryColor,
                       onPressed: () =>
-                          Navigator.of(context).pushNamed('/signup'),
+                          Navigator.of(context).pushNamed('/dashboard'),
                       child: Text(
-                        'SignUp',
+                        'Login',
                         style: Theme.of(context).textTheme.button,
                       ),
                       shape: RoundedRectangleBorder(
@@ -72,9 +72,10 @@ class LoginScreen extends StatelessWidget {
                     ),
                     RaisedButton(
                       color: Theme.of(context).primaryColor,
-                      onPressed: () {},
+                      onPressed: () =>
+                          Navigator.of(context).pushNamed('/signup'),
                       child: Text(
-                        'Login',
+                        'SignUp',
                         style: Theme.of(context).textTheme.button,
                       ),
                       shape: RoundedRectangleBorder(
