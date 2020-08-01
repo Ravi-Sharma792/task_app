@@ -10,17 +10,18 @@ class DashboardScreen extends StatelessWidget {
             .collection('tasks/AZeRGAWdsdQPF15kbG9D/tasklist')
             .snapshots(),
         builder: (ctx, streamSnapshot) {
-          final documents = streamSnapshot.data.documents;
           if (streamSnapshot.connectionState == ConnectionState.waiting) {
             return Center(
               child: CircularProgressIndicator(),
             );
           }
+          final documents = streamSnapshot.data.documents;
           return ListView.builder(
             itemCount: documents.length,
             itemBuilder: (ctx, index) => Container(
               padding: EdgeInsets.all(8),
-              child: Text(documents[index]['task1']),
+              child:
+                  Text(documents[index]['task2'] + documents[index]['task1']),
             ),
           );
         },
