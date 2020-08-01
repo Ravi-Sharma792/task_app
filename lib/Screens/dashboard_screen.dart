@@ -20,8 +20,7 @@ class DashboardScreen extends StatelessWidget {
             itemCount: documents.length,
             itemBuilder: (ctx, index) => Container(
               padding: EdgeInsets.all(8),
-              child:
-                  Text(documents[index]['task2'] + documents[index]['task1']),
+              child: Text(documents[index]['task1']),
             ),
           );
         },
