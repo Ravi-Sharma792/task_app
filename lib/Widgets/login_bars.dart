@@ -8,28 +8,27 @@ class LoginBars extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(45),
+    return TextFormField(
+      style: TextStyle(
+        fontFamily: 'Raleway',
+        color: Colors.black,
       ),
-      child: TextField(
-        style: TextStyle(
+      decoration: InputDecoration(
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Theme.of(context).primaryColor,
+            width: 2,
+          ),
+        ),
+        labelText: title,
+        labelStyle: TextStyle(
           fontFamily: 'Raleway',
           color: Colors.black,
         ),
-        decoration: InputDecoration(
-          border: InputBorder.none,
-          labelText: title,
-          labelStyle: TextStyle(
-            fontFamily: 'Raleway',
-            color: Colors.black,
-          ),
-          prefixIcon: Icon(
-            icon,
-            color: Theme.of(context).primaryColor,
-            size: 23,
-          ),
+        prefixIcon: Icon(
+          icon,
+          color: Theme.of(context).primaryColor,
+          size: 23,
         ),
       ),
     );

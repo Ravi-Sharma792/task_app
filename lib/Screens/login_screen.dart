@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:task_app/Widgets/login_bars.dart';
