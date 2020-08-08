@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:task_app/Widgets/login_bars.dart';
 import 'package:task_app/Widgets/social_media_bar.dart';
@@ -13,14 +15,24 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   final formKey = GlobalKey<FormState>();
 
-  void trysubmit() {
+  void trysubmit() async {
     final isValid = formKey.currentState.validate();
+    final auth = FirebaseAuth.instance;
+    AuthResult authResult;
 
     if (isValid) {
       formKey.currentState.save();
       print(username);
       print(email);
       print(password);
+      try {
+        authResult = await auth.createUserWithEmailAndPassword(
+          email: email.trim(),
+          password: password,
+        );
+      } catch (err) {
+        print(err);
+      }
     }
   }
 
