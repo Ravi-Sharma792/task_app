@@ -7,12 +7,12 @@ import 'package:task_app/Widgets/social_media_bar.dart';
 import '../Models/auth_form.dart';
 // import 'package:flare_flutter/flare_actor.dart';
 
-class SignUpScreen extends StatefulWidget {
+class AuthScreen extends StatefulWidget {
   @override
-  _SignUpScreenState createState() => _SignUpScreenState();
+  _AuthScreenState createState() => _AuthScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _AuthScreenState extends State<AuthScreen> {
   final formKey = GlobalKey<FormState>();
 
   void trysubmit() async {
@@ -54,7 +54,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   key: formKey,
                   child: Column(
                     children: <Widget>[
-                      LoginBars(Icons.account_circle, 'Username'),
+                      if (!isLogin) LoginBars(Icons.account_circle, 'Username'),
                       SizedBox(
                         height: 10.0,
                       ),
@@ -70,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         color: Theme.of(context).primaryColor,
                         onPressed: trysubmit,
                         child: Text(
-                          'SignUp',
+                          isLogin ? 'Login' : 'Signup',
                           style: Theme.of(context).textTheme.button,
                         ),
                         shape: RoundedRectangleBorder(
@@ -90,10 +90,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       RaisedButton(
                         color: Theme.of(context).primaryColor,
-                        onPressed: () =>
-                            Navigator.of(context).pushNamed('/login'),
+                        onPressed: () {
+                          setState(() {
+                            isLogin = !isLogin;
+                          });
+                        },
                         child: Text(
-                          'Login',
+                          isLogin
+                              ? 'Create new account'
+                              : 'I already have an account',
                           style: Theme.of(context).textTheme.button,
                         ),
                         shape: RoundedRectangleBorder(

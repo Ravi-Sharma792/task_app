@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/Screens/dashboard_screen.dart';
-import 'package:task_app/Screens/login_screen.dart';
 import 'package:task_app/Screens/welcome_screen.dart';
 import 'Screens/signup_screen.dart';
 
@@ -30,8 +29,8 @@ class MyApp extends StatelessWidget {
       ),
       home: SafeArea(child: WelcomeScreen()),
       routes: {
-        '/signup': (ctx) => SignUpScreen(),
-        '/login': (ctx) => LoginScreen(),
+        '/auth': (ctx) => AuthScreen(),
+        
         '/dashboard': (ctx) => DashboardScreen(),
       },
     );
