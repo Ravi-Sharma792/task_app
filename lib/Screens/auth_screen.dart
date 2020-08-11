@@ -1,10 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:task_app/Widgets/login_bars.dart';
 import 'package:task_app/Widgets/social_media_bar.dart';
 import '../Models/auth_form.dart';
+
 // import 'package:flare_flutter/flare_actor.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -26,12 +28,38 @@ class _AuthScreenState extends State<AuthScreen> {
       print(email);
       print(password);
       try {
-        authResult = await auth.createUserWithEmailAndPassword(
-          email: email.trim(),
-          password: password,
-        );
-      } catch (err) {
+        if (isLogin) {
+          authResult = await auth.signInWithEmailAndPassword(
+            email: email.trim(),
+            password: password,
+          );
+        } else {
+          authResult = await auth.createUserWithEmailAndPassword(
+            email: email.trim(),
+            password: password,
+          );
+        }
+        await Firestore.instance
+            .collection('users')
+            .document(authResult.user.uid)
+            .setData({
+          'username': username,
+          'email': email,
+        });
+      } on PlatformException catch (err) {
         print(err);
+        // var message = 'An error occurred, pelase check your credentials!';
+
+        // if (err.message != null) {
+        //   message = err.message;
+        // }
+
+        // Scaffold.of(context).showSnackBar(
+        //   SnackBar(
+        //     content: Text(message),
+        //     backgroundColor: Colors.redAccent,
+        //   ),
+        // );
       }
     }
   }
