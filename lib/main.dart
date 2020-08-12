@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:task_app/Screens/dashboard_screen.dart';
 import 'package:task_app/Screens/welcome_screen.dart';
@@ -27,7 +28,14 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: SafeArea(child: WelcomeScreen()),
+      home: StreamBuilder(
+          stream: FirebaseAuth.instance.onAuthStateChanged,
+          builder: (ctx, userSnapshot) {
+            if (userSnapshot.hasData) {
+              return DashboardScreen();
+            }
+            return WelcomeScreen();
+          }),
       routes: {
         '/auth': (ctx) => AuthScreen(),
         '/dashboard': (ctx) => DashboardScreen(),

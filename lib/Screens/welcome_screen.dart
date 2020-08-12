@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/Models/auth_form.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -87,7 +86,6 @@ class WelcomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     onPressed: () {
-                      isLogin = true;
                       Navigator.of(context).pushReplacementNamed('/auth');
                     },
                     child: Text(
