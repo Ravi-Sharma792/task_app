@@ -8,7 +8,7 @@ class AuthForm extends StatefulWidget {
     this.submitFn,
     this.isLoading,
   );
-
+  final bool isLoading;
   final void Function(
     String email,
     String password,
@@ -16,17 +16,17 @@ class AuthForm extends StatefulWidget {
     bool isLogin,
     BuildContext ctx,
   ) submitFn;
-  final bool isLoading;
+
   @override
   _AuthFormState createState() => _AuthFormState();
 }
 
 class _AuthFormState extends State<AuthForm> {
   final _formkey = GlobalKey<FormState>();
-  String _userName = '';
-  String _userEmail = '';
-  String _userPassword = '';
-  bool _isLogin = false;
+  var _userName = '';
+  var _userEmail = '';
+  var _userPassword = '';
+  bool _isLogin = true;
 
   void _trySubmit() {
     final isValid = _formkey.currentState.validate();

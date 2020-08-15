@@ -1,10 +1,8 @@
-// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:task_app/Widgets/auth_form.dart';
-// import 'package:flutter/services.dart';
+import 'package:flutter/services.dart';
 
 class AuthScreen extends StatefulWidget {
   @override
@@ -41,6 +39,7 @@ class _AuthScreenState extends State<AuthScreen> {
         'username': username,
         'email': email,
       });
+
       setState(() {
         _isLoading = false;
       });
